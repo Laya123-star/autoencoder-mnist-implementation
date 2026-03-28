@@ -162,6 +162,7 @@ The reconstructed images retain the overall structure and shape of the original 
 # 📁 Repository Structure
 
 autoencoder-mnist/
+
 │
 ├── DL_Assignment_3_AutoEncoders.ipynb  
 ├── README.md  
