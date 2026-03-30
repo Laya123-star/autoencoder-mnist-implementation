@@ -182,3 +182,56 @@ Click the **Google Colab button above**.
 
 ```python
 pip install tensorflow numpy matplotlib scikit-learn
+
+---
+
+## 📌 Academic Submission
+
+This project was created as part of a **Deep Learning assignment**, demonstrating the implementation of an **Autoencoder Neural Network** for image reconstruction using the MNIST dataset. It includes data preprocessing, model design, training, evaluation, and visualization of reconstructed outputs.
+
+---
+## ⚠️ Limitations
+
+- The model uses a basic fully connected autoencoder, which may not capture spatial features as effectively as CNN-based autoencoders  
+
+- Reconstruction quality may be slightly blurred due to dimensionality reduction  
+
+- Limited to grayscale images (MNIST dataset only)  
+
+- Does not handle complex or high-resolution image datasets  
+
+- Hyperparameter tuning is minimal and may affect optimal performance  
+
+- Model performance may not generalize well to other image datasets
+
+---
+
+## 📌 Future Enhancements
+
+- Implement **Convolutional Autoencoders (CNN-based)** for better image reconstruction  
+
+- Experiment with **Variational Autoencoders (VAE)**  
+
+- Apply model to more complex datasets (CIFAR-10, medical images, etc.)  
+
+- Perform hyperparameter tuning for improved performance  
+
+- Add noise to input images and build a **Denoising Autoencoder**  
+
+- Deploy the model using a web interface (Streamlit / Flask)  
+
+---
+
+## 👤 Author
+
+**Name:** Laya Mary Joy  
+
+**Organization:** Entri Elevate  
+
+**Date:** March 28, 2026
+
+---
+
+## ⭐ Acknowledgment
+
+Thanks to **Entri Elevate** for guidance and support throughout this project.
