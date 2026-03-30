@@ -5,55 +5,62 @@
 ![Autoencoder](https://img.shields.io/badge/Model-Autoencoder-green)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Colab-yellow)
 
-A deep learning project focused on building and evaluating an **Autoencoder Neural Network** for **image reconstruction** using the MNIST handwritten digits dataset.
+A deep learning project that focuses on building and evaluating an **Autoencoder Neural Network** for **image reconstruction** using the MNIST handwritten digits dataset.
 
 ---
 
 ## 🚀 Run Notebook in Google Colab
 
-Click the button below to open the notebook directly in Google Colab.
+Click below to open the notebook directly in Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HmR5d5TH-Pien5yfwS96sgoFiiFb_DJq)
 
 ---
 
-# 📘 Project Overview
+## 📘 Project Overview
 
-This project implements a **basic Autoencoder model** to learn compressed representations of handwritten digit images and reconstruct them.
+This project demonstrates how an **Autoencoder model** can learn compressed representations of image data and reconstruct the original images.
 
-The project covers the complete deep learning workflow including:
+The workflow includes:
 
-- Dataset loading (MNIST)  
-- Data preprocessing and normalization  
-- Encoder–Decoder architecture design  
-- Model training and validation  
-- Loss curve visualization  
-- Image reconstruction comparison  
+- Loading the MNIST dataset
+  
+- Data preprocessing and normalization
+  
+- Designing encoder–decoder architecture
+  
+- Training and validating the model
+  
+- Visualizing loss curves
+  
+- Comparing original and reconstructed images  
 
-The goal is to build a model that can **efficiently compress and reconstruct image data**.
-
----
-
-# 🎯 Objective
-
-The main objectives of this project are:
-
-🔹 Understand Autoencoder architecture (Encoder + Decoder)  
-🔹 Compress 28×28 images into a latent representation  
-🔹 Reconstruct images from compressed features  
-🔹 Train and evaluate model performance  
-🔹 Visualize reconstruction quality  
+The primary goal is to build a model capable of **efficient data compression and accurate image reconstruction**.
 
 ---
 
-# 📂 Dataset Information
+## 🎯 Objective
+
+- Understand the working of Autoencoders (Encoder + Decoder)
+   
+- Compress 28×28 images into a lower-dimensional latent space
+  
+- Reconstruct images from compressed representations
+  
+- Evaluate reconstruction performance
+  
+- Visualize and interpret output quality  
+
+---
+
+## 📂 Dataset Information
 
 The dataset used is the **MNIST Handwritten Digits Dataset**.
 
 ### Dataset Details
 
 | Feature | Description |
-|------|-------------|
+|--------|------------|
 | Images | 28×28 grayscale images |
 | Classes | Digits (0–9) |
 | Training Samples | 60,000 |
@@ -61,95 +68,104 @@ The dataset used is the **MNIST Handwritten Digits Dataset**.
 
 ---
 
-# 🧹 Data Preprocessing
+## 🧹 Data Preprocessing
 
-Before training the model, the following preprocessing steps were applied:
+The following preprocessing steps were applied:
 
 ### ✔ Normalization
-- Pixel values scaled to range **0–1**
+- Pixel values scaled to the range **0–1**
 
 ### ✔ Reshaping
-- Images reshaped into vectors (784) or retained as 28×28
+- Images reshaped into vectors (784) or maintained as 28×28 format
 
 ### ✔ Train-Test Split
 - Used predefined MNIST training and test datasets
 
 ---
 
-# 🧠 Autoencoder Architecture
+## 🧠 Autoencoder Architecture
 
-A **fully connected Autoencoder** was built using **TensorFlow / Keras**.
+A **fully connected Autoencoder** was implemented using **TensorFlow / Keras**.
 
 ### Architecture Components
 
-✔ Encoder:
-- Dense layers to compress input
-- Latent space representation (compressed features)
+✔ **Encoder**
+- Dense layers to compress input data
+  
+- Generates a compact latent representation  
 
-✔ Decoder:
-- Dense layers to reconstruct image
-- Output layer with **sigmoid activation**
+✔ **Decoder**
+- Dense layers to reconstruct the image
+  
+- Output layer uses **sigmoid activation**  
 
-✔ Loss Function:
-- Binary Crossentropy / Mean Squared Error
+✔ **Loss Function**
+- Binary Crossentropy / Mean Squared Error  
 
 ---
 
-# ⚙ Model Training
+## ⚙ Model Training
 
-The model was trained using the **training dataset** and validated using the **test dataset**.
+The model was trained using the training dataset and evaluated on the test dataset.
 
 ### Training Details
 
-- Optimizer: Adam  
-- Epochs: (as per notebook)  
-- Batch Size: (as per notebook)  
+- Optimizer: Adam
+  
+- Epochs: (as defined in notebook)
+  
+- Batch Size: (as defined in notebook)  
 
-Training progress was monitored using:
+### Monitoring
 
-- Training Loss  
+- Training Loss
+  
 - Validation Loss  
 
 ---
 
-# 📊 Model Evaluation
+## 📊 Model Evaluation
 
 ### ✔ Model Summary
-- Displays encoder and decoder structure  
+- Displays encoder and decoder architecture  
 
 ### ✔ Loss Curve
-- Plotted **training vs validation loss**  
-- Shows model learning behavior  
+- Visual comparison of training vs validation loss
+  
+- Helps identify learning trends and overfitting  
 
 ---
 
-# 🖼 Reconstruction Results
+## 🖼 Reconstruction Results
 
-The model performance is evaluated by comparing:
+Model performance is evaluated by comparing:
 
-- Original images  
+- Original images
+  
 - Reconstructed images  
 
 ### Observations
 
-- Reconstructed images closely resemble original digits  
-- Minor blurring may occur due to compression  
-- Model successfully captures key visual features  
+- Reconstructed images closely resemble the original digits
+  
+- Slight blurring occurs due to compression
+
+- Key visual features are preserved effectively  
 
 ---
 
-# 📝 Results Explanation
+## 📝 Results Explanation
 
-The autoencoder model successfully learned a compressed representation of the MNIST images and was able to reconstruct them with good accuracy. The training and validation loss decreased steadily, indicating effective learning without major overfitting.
+The autoencoder successfully learned meaningful compressed representations of the MNIST dataset. Both training and validation loss decreased steadily, indicating stable learning.
 
-The reconstructed images retain the overall structure and shape of the original digits, although some fine details are slightly blurred. This is expected as the model compresses the image into a lower-dimensional latent space. Overall, the model demonstrates the ability of autoencoders to perform dimensionality reduction and feature learning.
+Although reconstructed images may lose some fine details, the overall structure and digit shapes are preserved. This demonstrates the effectiveness of autoencoders in **dimensionality reduction and feature learning**.
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
 | Tool | Purpose |
-|----|----|
+|------|--------|
 | Python | Programming language |
 | TensorFlow / Keras | Deep learning framework |
 | NumPy | Numerical computation |
@@ -159,66 +175,82 @@ The reconstructed images retain the overall structure and shape of the original 
 
 ---
 
-# 📁 Repository Structure
+## 📁 Repository Structure
 
+```
 autoencoder-mnist/
 
 │
-├── DL_Assignment_3_AutoEncoders.ipynb  
-├── README.md  
-└── DL Assignment 3 - Auto Encoders.pdf  
+
+├── DL_Assignment_3_AutoEncoders.ipynb
+
+├── README.md
+
+└── DL Assignment 3 - Auto Encoders.pdf
+```
 
 ---
 
-# 🚀 How to Run the Project
+## 🚀 How to Run the Project
 
 ### 1️⃣ Open the Notebook
-
-Click the **Google Colab button above**.
+Click the **Google Colab button above**
 
 ---
 
 ### 2️⃣ Install Required Libraries
 
-```python
+```bash
 pip install tensorflow numpy matplotlib scikit-learn
+```
+
+---
+
+### 3️⃣ Run the Notebook
+
+- Execute all cells step-by-step
+  
+- Train the model
+  
+- Visualize reconstruction results  
 
 ---
 
 ## 📌 Academic Submission
 
-This project was created as part of a **Deep Learning assignment**, demonstrating the implementation of an **Autoencoder Neural Network** for image reconstruction using the MNIST dataset. It includes data preprocessing, model design, training, evaluation, and visualization of reconstructed outputs.
+This project was developed as part of a **Deep Learning assignment**, demonstrating the implementation of an **Autoencoder Neural Network** for image reconstruction. It covers data preprocessing, model design, training, evaluation, and visualization.
 
 ---
+
 ## ⚠️ Limitations
 
-- The model uses a basic fully connected autoencoder, which may not capture spatial features as effectively as CNN-based autoencoders  
-
-- Reconstruction quality may be slightly blurred due to dimensionality reduction  
-
-- Limited to grayscale images (MNIST dataset only)  
-
-- Does not handle complex or high-resolution image datasets  
-
-- Hyperparameter tuning is minimal and may affect optimal performance  
-
-- Model performance may not generalize well to other image datasets
+- Uses a basic fully connected architecture instead of CNN-based models
+  
+- Reconstruction may appear slightly blurred due to compression
+  
+- Limited to grayscale MNIST dataset
+  
+- Not suitable for complex or high-resolution images
+  
+- Minimal hyperparameter tuning
+  
+- Limited generalization to other datasets  
 
 ---
 
 ## 📌 Future Enhancements
 
-- Implement **Convolutional Autoencoders (CNN-based)** for better image reconstruction  
-
-- Experiment with **Variational Autoencoders (VAE)**  
-
-- Apply model to more complex datasets (CIFAR-10, medical images, etc.)  
-
-- Perform hyperparameter tuning for improved performance  
-
-- Add noise to input images and build a **Denoising Autoencoder**  
-
-- Deploy the model using a web interface (Streamlit / Flask)  
+- Implement **Convolutional Autoencoders (CNN-based)**
+  
+- Explore **Variational Autoencoders (VAE)**
+  
+- Apply to complex datasets like CIFAR-10
+  
+- Perform advanced hyperparameter tuning
+  
+- Build a **Denoising Autoencoder**
+  
+- Deploy using **Streamlit / Flask**  
 
 ---
 
@@ -228,10 +260,12 @@ This project was created as part of a **Deep Learning assignment**, demonstratin
 
 **Organization:** Entri Elevate  
 
-**Date:** March 28, 2026
+**Date:** March 28, 2026  
 
 ---
 
 ## ⭐ Acknowledgment
 
-Thanks to **Entri Elevate** for guidance and support throughout this project.
+I would like to thank **Entri Elevate** for their valuable guidance and support throughout this project.
+
+---
